@@ -5,11 +5,16 @@ class TriangleTest(unittest.TestCase):
 
     # test for a valid triangle
     def test_init_1(self):
-        pass
+        t = Triangle(3,4,5)
+        assert t.s1 == 3
+        assert t.s2 == 4
+        assert t.s3 == 5
+        
 
     # test for TypeError exception when creating and initializing a Triangle object
     def test_init_2(self):
-        pass
+        with self.assertRaises(TypeError):
+            Triangle("3","4","5")
 
     # test for ValueError exception when creating and initializing a Triangle object: side(s) not positive
     def test_init_3(self):
