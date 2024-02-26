@@ -105,8 +105,12 @@ class TriangleTest(unittest.TestCase):
 
     # test if a Triangle object is equal to itself (i.e., returns True)
     def test_eq_3(self):
-        pass
+        t1 = Triangle(3,4,5)
+        self.assertTrue(t1.__eq__(t1))
 
     # test if a Triangle object is not equal to an object that is not Triangle object (i.e., returns False)
     def test_eq_4(self):
-        pass
+        t1 = Triangle(3,4,5)
+        t2 = (3,4,5)
+        self.assertFalse(t1.__eq__(t2))
+        
