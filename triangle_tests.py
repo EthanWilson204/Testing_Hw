@@ -10,7 +10,6 @@ class TriangleTest(unittest.TestCase):
         assert t.s2 == 4
         assert t.s3 == 5
         
-
     # test for TypeError exception when creating and initializing a Triangle object
     def test_init_2(self):
         with self.assertRaises(TypeError):
@@ -26,18 +25,20 @@ class TriangleTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             Triangle(20,2,2)
             
-
     # test for "Equilateral" type of triangle
     def test_type_1(self):
-        pass
+        t = Triangle(3,3,3)
+        self.assertTrue(t.is_equilateral())
 
     # test for "Isosceles" type of triangle
     def test_type_2(self):
-        pass
+        t = Triangle(5,5,6)
+        self.assertTrue(t.is_isosceles())
 
     # test for "Scalene" type of triangle
     def test_type_3(self):
-        pass
+        t = Triangle(3,4,5)
+        self.assertTrue(t.is_scalene())
 
     # test for checking if a triangle is equilateral
     def test_is_equilateral_1(self):
