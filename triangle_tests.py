@@ -18,11 +18,14 @@ class TriangleTest(unittest.TestCase):
 
     # test for ValueError exception when creating and initializing a Triangle object: side(s) not positive
     def test_init_3(self):
-        pass
+        with self.assertRaises(ValueError):
+            Triangle(-3,-4,-5)
 
     # test for ValueError exception when creating and initializing a Triangle object: invalid triagle
     def test_init_4(self):
-        pass
+        with self.assertRaises(ValueError):
+            Triangle(20,2,2)
+            
 
     # test for "Equilateral" type of triangle
     def test_type_1(self):
