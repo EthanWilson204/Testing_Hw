@@ -28,21 +28,21 @@ class TriangleTest(unittest.TestCase):
     # test for "Equilateral" type of triangle
     def test_type_1(self):
         t = Triangle(3,3,3)
-        self.assertTrue(t.is_equilateral())
-
+        t_string = t.type()
+        self.assertEqual(t_string, 'Equilateral')
+        
     # test for "Isosceles" type of triangle
     def test_type_2(self):
-        t = Triangle(5,5,6)
-        self.assertTrue(t.is_isosceles())
+        pass
 
     # test for "Scalene" type of triangle
     def test_type_3(self):
-        t = Triangle(3,4,5)
-        self.assertTrue(t.is_scalene())
-
+        pass
+    
     # test for checking if a triangle is equilateral
     def test_is_equilateral_1(self):
-        pass
+        t = Triangle(3,3,3)
+        self.assertTrue(t.is_equilateral())
 
     # test for checking if a triangle is not equilateral
     def test_is_equilateral_2(self):
@@ -50,7 +50,8 @@ class TriangleTest(unittest.TestCase):
 
     # test for checking if a triangle is isosceles
     def test_is_isoceles_1(self):
-        pass
+        t = Triangle(5,5,6)
+        self.assertTrue(t.is_isosceles())
 
     # test for checking if a triangle is not isosceles
     def test_is_isoceles_2(self):
@@ -58,7 +59,8 @@ class TriangleTest(unittest.TestCase):
 
     # test for checking if a triangle is scalene
     def test_is_scalene_1(self):
-        pass
+        t = Triangle(3,4,5)
+        self.assertTrue(t.is_scalene())
 
     # test for checking if a triangle is not scalene
     def test_is_scalene_2(self):
