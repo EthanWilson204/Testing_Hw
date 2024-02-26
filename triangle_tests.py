@@ -1,3 +1,9 @@
+'''
+Editor: Ethan Wilson
+Class: CIS 350 02
+Professor: J. Nandigam
+'''
+
 import unittest
 from triangle import Triangle
 
